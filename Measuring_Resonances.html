@@ -136,6 +136,50 @@
       </form>
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/hu/" hreflang="hu" class="md-select__link">
+                    Magyar
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -939,6 +983,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Using_PWM_Tools.html" class="md-nav__link">
         Using PWM tools
       </a>
@@ -1273,6 +1331,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1490,6 +1563,40 @@ and <strong>will not work</strong>. The recommended connection scheme:</p>
 </tr>
 </tbody>
 </table>
+<p>An alternative to the ADXL345 is the MPU-9250 (or MPU-6050).  This
+accelerometer has been tested to work over I2C on the RPi at 400kbaud.
+Recommended connection scheme for I2C:</p>
+<table>
+<thead>
+<tr>
+<th align="center">MPU-9250 pin</th>
+<th align="center">RPi pin</th>
+<th align="center">RPi pin name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">3V3 (or VCC)</td>
+<td align="center">01</td>
+<td align="center">3.3v DC power</td>
+</tr>
+<tr>
+<td align="center">GND</td>
+<td align="center">09</td>
+<td align="center">Ground</td>
+</tr>
+<tr>
+<td align="center">SDA</td>
+<td align="center">03</td>
+<td align="center">GPIO02 (SDA1)</td>
+</tr>
+<tr>
+<td align="center">SCL</td>
+<td align="center">05</td>
+<td align="center">GPIO03 (SCL1)</td>
+</tr>
+</tbody>
+</table>
 <p>Fritzing wiring diagrams for some of the ADXL345 boards:</p>
 <p><img alt="ADXL345-Rpi" src="img/adxl345-fritzing.png" /></p>
 <p>Double-check your wiring before powering up the Raspberry Pi to prevent
@@ -1512,26 +1619,26 @@ from the printer frame. Failing to ensure that can create a ground loop in
 the system that may damage the electronics.</p>
 <h3 id="software-installation">Software installation<a class="headerlink" href="#software-installation" title="Permanent link">&para;</a></h3>
 <p>Note that resonance measurements and shaper auto-calibration require additional
-software dependencies not installed by default. First, you will have to run on
-your Raspberry Pi the following command:</p>
+software dependencies not installed by default. First, run on your Raspberry Pi
+the following commands:</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt install python3-numpy python3-matplotlib libatlas-base-dev
+</code></pre></div>
+
+<p>Next, in order to install NumPy in the Klipper environment, run the command:</p>
 <div class="highlight"><pre><span></span><code>~/klippy-env/bin/pip install -v numpy
 </code></pre></div>
 
-<p>to install <code>numpy</code> package. Note that, depending on the performance of the
-CPU, it may take <em>a lot</em> of time, up to 10-20 minutes. Be patient and wait
-for the completion of the installation. On some occasions, if the board has
-too little RAM, the installation may fail and you will need to enable swap.</p>
-<p>Next, run the following commands to install the additional dependencies:</p>
-<div class="highlight"><pre><span></span><code>sudo apt update
-sudo apt install python3-numpy python3-matplotlib
-</code></pre></div>
-
+<p>Note that, depending on the performance of the CPU, it may take <em>a lot</em>
+of time, up to 10-20 minutes. Be patient and wait for the completion of
+the installation. On some occasions, if the board has too little RAM
+the installation may fail and you will need to enable swap.</p>
 <p>Afterwards, check and follow the instructions in the
 <a href="RPi_microcontroller.html">RPi Microcontroller document</a> to setup the
 "linux mcu" on the Raspberry Pi.</p>
 <p>Make sure the Linux SPI driver is enabled by running <code>sudo
 raspi-config</code> and enabling SPI under the "Interfacing options" menu.</p>
-<p>Add the following to the printer.cfg file:</p>
+<p>For the ADXL345, add the following to the printer.cfg file:</p>
 <div class="highlight"><pre><span></span><code>[mcu rpi]
 serial: /tmp/klipper_host_mcu
 
@@ -1546,6 +1653,22 @@ probe_points:
 
 <p>It is advised to start with 1 probe point, in the middle of the print bed,
 slightly above it.</p>
+<p>For the MPU-9250, make sure the Linux I2C driver is enabled and the baud rate is
+set to 400000 (see <a href="RPi_microcontroller.html#optional-enabling-i2c">Enabling I2C</a>
+section for more details). Then, add the following to the printer.cfg:</p>
+<div class="highlight"><pre><span></span><code>[mcu rpi]
+serial: /tmp/klipper_host_mcu
+
+[mpu9250]
+i2c_mcu: rpi
+i2c_bus: i2c.1
+
+[resonance_tester]
+accel_chip: mpu9250
+probe_points:
+    100, 100, 20  # an example
+</code></pre></div>
+
 <p>Restart Klipper via the <code>RESTART</code> command.</p>
 <h2 id="measuring-the-resonances">Measuring the resonances<a class="headerlink" href="#measuring-the-resonances" title="Permanent link">&para;</a></h2>
 <h3 id="checking-the-setup">Checking the setup<a class="headerlink" href="#checking-the-setup" title="Permanent link">&para;</a></h3>

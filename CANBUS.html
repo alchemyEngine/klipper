@@ -136,6 +136,50 @@
       </form>
     
     
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh/" hreflang="zh" class="md-select__link">
+                    简体中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/zh-Hant/" hreflang="zh-Hant" class="md-select__link">
+                    繁體中文
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/hu/" hreflang="hu" class="md-select__link">
+                    Magyar
+                  </a>
+                </li>
+                
+                <li class="md-select__item">
+                  <a href="/it/" hreflang="it" class="md-select__link">
+                    Italiano
+                  </a>
+                </li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
@@ -785,6 +829,20 @@
   
   
     <li class="md-nav__item">
+      <a href="Exclude_Object.html" class="md-nav__link">
+        Exclude Objects
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="Using_PWM_Tools.html" class="md-nav__link">
         Using PWM tools
       </a>
@@ -1147,6 +1205,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usb-to-can-bus-bridge-mode" class="md-nav__link">
+    USB to CAN bus bridge mode
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1186,6 +1251,21 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Sponsors.html" class="md-nav__link">
+        Sponsors
+      </a>
     </li>
   
 
@@ -1251,6 +1331,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usb-to-can-bus-bridge-mode" class="md-nav__link">
+    USB to CAN bus bridge mode
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1271,9 +1358,9 @@
 <h1 id="canbus">CANBUS<a class="headerlink" href="#canbus" title="Permanent link">&para;</a></h1>
 <p>This document describes Klipper's CAN bus support.</p>
 <h2 id="device-hardware">Device Hardware<a class="headerlink" href="#device-hardware" title="Permanent link">&para;</a></h2>
-<p>Klipper currently only supports CAN on stm32 chips. In addition, the
-micro-controller chip must support CAN and it must be on a board that
-has a CAN transceiver.</p>
+<p>Klipper currently supports CAN on stm32 and rp2040 chips. In addition,
+the micro-controller chip must be on a board that has a CAN
+transceiver.</p>
 <p>To compile for CAN, run <code>make menuconfig</code> and select "CAN bus" as the
 communication interface. Finally, compile the micro-controller code
 and flash it to the target board.</p>
@@ -1331,7 +1418,7 @@ powered and wired correctly, and then run:</p>
 
 <p>If uninitialized CAN devices are detected the above command will
 report lines like the following:</p>
-<div class="highlight"><pre><span></span><code>Found canbus_uuid=11aa22bb33cc
+<div class="highlight"><pre><span></span><code>Found canbus_uuid=11aa22bb33cc, Application: Klipper
 </code></pre></div>
 
 <p>Each device will have a unique identifier. In the above example,
@@ -1344,6 +1431,42 @@ will no longer appear in the list.</p>
 the CAN bus to communicate with the device - for example:</p>
 <div class="highlight"><pre><span></span><code>[mcu my_can_mcu]
 canbus_uuid: 11aa22bb33cc
+</code></pre></div>
+
+<h2 id="usb-to-can-bus-bridge-mode">USB to CAN bus bridge mode<a class="headerlink" href="#usb-to-can-bus-bridge-mode" title="Permanent link">&para;</a></h2>
+<p>Some micro-controllers support selecting "USB to CAN bus bridge" mode
+during "make menuconfig". This mode may allow one to use a
+micro-controller as both a "USB to CAN bus adapter" and as a Klipper
+node.</p>
+<p>When Klipper uses this mode the micro-controller appears as a "USB CAN
+bus adapter" under Linux. The "Klipper bridge mcu" itself will appear
+as if was on this CAN bus - it can be identified via <code>canbus_query.py</code>
+and configured like other CAN bus Klipper nodes. It will appear
+alongside other devices that are actually on the CAN bus.</p>
+<p>Some important notes when using this mode:</p>
+<ul>
+<li>The "bridge mcu" is not actually on the CAN bus. Messages to and
+  from it do not consume bandwidth on the CAN bus. The mcu can not be
+  seen by other adapters that may be on the CAN bus.</li>
+</ul>
+<ul>
+<li>It is necessary to configure the <code>can0</code> (or similar) interface in
+  Linux in order to communicate with the bus. However, Linux CAN bus
+  speed and CAN bus bit-timing options are ignored by Klipper.
+  Currently, the CAN bus frequency is specified during "make
+  menuconfig" and the bus speed specified in Linux is ignored.</li>
+</ul>
+<ul>
+<li>Whenever the "bridge mcu" is reset, Linux will disable the
+  corresponding <code>can0</code> interface. To ensure proper handling of
+  FIRMWARE_RESTART and RESTART commands, it is recommended to replace
+  <code>auto</code> with <code>allow-hotplug</code> in the <code>/etc/network/interfaces.d/can0</code>
+  file. For example:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>allow-hotplug can0
+iface can0 can static
+    bitrate 500000
+    up ifconfig $IFACE txqueuelen 128
 </code></pre></div>
 
               
