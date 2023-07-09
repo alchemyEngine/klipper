@@ -880,6 +880,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gcode_button" class="md-nav__link">
+    gcode_button
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gcode_macro" class="md-nav__link">
     gcode_macro
   </a>
@@ -999,8 +1006,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#screws_tilt_adjust" class="md-nav__link">
+    screws_tilt_adjust
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#servo" class="md-nav__link">
     servo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepper_enable" class="md-nav__link">
+    stepper_enable
   </a>
   
 </li>
@@ -1480,6 +1501,20 @@
   
   
     <li class="md-nav__item">
+      <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
+        CANBUS Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
         TSL1401CL filament width sensor
       </a>
@@ -1634,6 +1669,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#gcode_button" class="md-nav__link">
+    gcode_button
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#gcode_macro" class="md-nav__link">
     gcode_macro
   </a>
@@ -1753,8 +1795,22 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#screws_tilt_adjust" class="md-nav__link">
+    screws_tilt_adjust
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#servo" class="md-nav__link">
     servo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stepper_enable" class="md-nav__link">
+    stepper_enable
   </a>
   
 </li>
@@ -1980,6 +2036,9 @@ the following strings: "adjust", "fine".</li>
 <ul>
 <li><code>pressure_advance</code>: The current <a href="Pressure_Advance.html">pressure advance</a> value.</li>
 <li><code>smooth_time</code>: The current pressure advance smooth time.</li>
+<li><code>motion_queue</code>: The name of the extruder that this extruder stepper is
+  currently synchronized to.  This is reported as <code>None</code> if the extruder stepper
+  is not currently associated with an extruder.</li>
 </ul>
 <h2 id="fan">fan<a class="headerlink" href="#fan" title="Permanent link">&para;</a></h2>
 <p>The following information is available in
@@ -2018,6 +2077,12 @@ objects:</p>
   <code>unretract_speed</code>: The current settings for the firmware_retraction
   module. These settings may differ from the config file if a
   <code>SET_RETRACTION</code> command alters them.</li>
+</ul>
+<h2 id="gcode_button">gcode_button<a class="headerlink" href="#gcode_button" title="Permanent link">&para;</a></h2>
+<p>The following information is available in
+<a href="Config_Reference.html#gcode_button">gcode_button some_name</a> objects:</p>
+<ul>
+<li><code>state</code>: The current button state returned as "PRESSED" or "RELEASED"</li>
 </ul>
 <h2 id="gcode_macro">gcode_macro<a class="headerlink" href="#gcode_macro" title="Permanent link">&para;</a></h2>
 <p>The following information is available in
@@ -2184,8 +2249,12 @@ is defined):</p>
 defined):</p>
 <ul>
 <li><code>filename</code>, <code>total_duration</code>, <code>print_duration</code>, <code>filament_used</code>,
-  <code>state</code>, <code>message</code>: Estimated information about the current print
-  when a virtual_sdcard print is active.</li>
+  <code>state</code>, <code>message</code>: Estimated information about the current print when a
+  virtual_sdcard print is active.</li>
+<li><code>info.total_layer</code>: The total layer value of the last <code>SET_PRINT_STATS_INFO
+   TOTAL_LAYER=&lt;value&gt;</code> G-Code command.</li>
+<li><code>info.current_layer</code>: The current layer value of the last
+  <code>SET_PRINT_STATS_INFO CURRENT_LAYER=&lt;value&gt;</code> G-Code command.</li>
 </ul>
 <h2 id="probe">probe<a class="headerlink" href="#probe" title="Permanent link">&para;</a></h2>
 <p>The following information is available in the
@@ -2193,6 +2262,7 @@ defined):</p>
 available if a <a href="Config_Reference.html#bltouch">bltouch</a> config section
 is defined):</p>
 <ul>
+<li><code>name</code>: Returns the name of the probe in use.</li>
 <li><code>last_query</code>: Returns True if the probe was reported as "triggered"
   during the last QUERY_PROBE command. Note, if this is used in a
   macro, due to the order of template expansion, the QUERY_PROBE
@@ -2219,12 +2289,39 @@ is defined):</p>
   the QUERY_ENDSTOP command must be run prior to the macro containing
   this reference.</li>
 </ul>
+<h2 id="screws_tilt_adjust">screws_tilt_adjust<a class="headerlink" href="#screws_tilt_adjust" title="Permanent link">&para;</a></h2>
+<p>The following information is available in the <code>screws_tilt_adjust</code>
+object:</p>
+<ul>
+<li><code>error</code>: Returns True if the most recent <code>SCREWS_TILT_CALCULATE</code>
+  command included the <code>MAX_DEVIATION</code> parameter and any of the probed
+  screw points exceeded the specified <code>MAX_DEVIATION</code>.</li>
+<li><code>results["&lt;screw&gt;"]</code>: A dictionary containing the following keys:<ul>
+<li><code>z</code>: The measured Z height of the screw location.</li>
+<li><code>sign</code>: A string specifying the direction to turn to screw for the
+  necessary adjustment. Either "CW" for clockwise or "CCW" for
+  counterclockwise.</li>
+<li><code>adjust</code>: The number of screw turns to adjust the screw, given in
+  the format "HH:MM," where "HH" is the number of full screw turns
+  and "MM" is the number of "minutes of a clock face" representing
+  a partial screw turn. (E.g. "01:15" would mean to turn the screw
+  one and a quarter revolutions.)</li>
+<li><code>is_base</code>: Returns True if this is the base screw.</li>
+</ul>
+</li>
+</ul>
 <h2 id="servo">servo<a class="headerlink" href="#servo" title="Permanent link">&para;</a></h2>
 <p>The following information is available in
 <a href="Config_Reference.html#servo">servo some_name</a> objects:</p>
 <ul>
 <li><code>printer["servo &lt;config_name&gt;"].value</code>: The last setting of the PWM
   pin (a value between 0.0 and 1.0) associated with the servo.</li>
+</ul>
+<h2 id="stepper_enable">stepper_enable<a class="headerlink" href="#stepper_enable" title="Permanent link">&para;</a></h2>
+<p>The following information is available in the <code>stepper_enable</code> object (this
+object is available if any stepper is defined):</p>
+<ul>
+<li><code>steppers["&lt;stepper&gt;"]</code>: Returns True if the given stepper is enabled.</li>
 </ul>
 <h2 id="system_stats">system_stats<a class="headerlink" href="#system_stats" title="Permanent link">&para;</a></h2>
 <p>The following information is available in the <code>system_stats</code> object
@@ -2278,6 +2375,9 @@ objects (eg, <code>[tmc2208 stepper_x]</code>):</p>
 <li><code>drv_status</code>: The results of the last driver status query. (Only
   non-zero fields are reported.) This field will be null if the driver
   is not enabled (and thus is not periodically queried).</li>
+<li><code>temperature</code>: The internal temperature reported by the driver. This
+  field will be null if the driver is not enabled or if the driver
+  does not support temperature reporting.</li>
 <li><code>run_current</code>: The currently set run current.</li>
 <li><code>hold_current</code>: The currently set hold current.</li>
 </ul>
