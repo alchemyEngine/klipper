@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="zh" class="no-js">
+<html lang="hu" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -13,7 +13,7 @@
     
     
       
-        <title>概述 - Klipper 文档</title>
+        <title>OctoPrint a Klipper-hez - Klipper dokumentáció</title>
       
     
     
@@ -74,8 +74,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
-          跳转至
+        <a href="#octoprint-a-klipper-hez" class="md-skip">
+          Kihagyás
         </a>
       
     </div>
@@ -87,8 +87,8 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="Klipper 文档" class="md-header__button md-logo" aria-label="Klipper 文档" data-md-component="logo">
+  <nav class="md-header__inner md-grid" aria-label="Élőfej">
+    <a href="." title="Klipper dokumentáció" class="md-header__button md-logo" aria-label="Klipper dokumentáció" data-md-component="logo">
       
   <img src="img/klipper.svg" alt="logo">
 
@@ -100,13 +100,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Klipper 文档
+            Klipper dokumentáció
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概述
+              OctoPrint a Klipper-hez
             
           </span>
         </div>
@@ -139,7 +139,7 @@
       <div class="md-header__option">
         <div class="md-select">
           
-          <button class="md-header__button md-icon" aria-label="选择当前语言">
+          <button class="md-header__button md-icon" aria-label="Select language">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2 0-.68.06-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.923 7.923 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8.008 8.008 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.65 15.65 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2z"/></svg>
           </button>
           <div class="md-select__inner">
@@ -194,18 +194,18 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Keresés" placeholder="Keresés" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <nav class="md-search__options" aria-label="查找">
+      <nav class="md-search__options" aria-label="Search">
         
-          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Törlés" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
@@ -217,7 +217,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            正在初始化搜索引擎
+            Keresés inicializálása
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -228,7 +228,7 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/Klipper3d/klipper/" title="前往仓库" class="md-source" data-md-component="source">
+        <a href="https://github.com/Klipper3d/klipper/" title="Főoldalra ugrás" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -261,18 +261,18 @@
                     
 
 
-<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="Navigáció" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Klipper 文档" class="md-nav__button md-logo" aria-label="Klipper 文档" data-md-component="logo">
+    <a href="." title="Klipper dokumentáció" class="md-nav__button md-logo" aria-label="Klipper dokumentáció" data-md-component="logo">
       
   <img src="img/klipper.svg" alt="logo">
 
     </a>
-    Klipper 文档
+    Klipper dokumentáció
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/Klipper3d/klipper/" title="前往仓库" class="md-source" data-md-component="source">
+      <a href="https://github.com/Klipper3d/klipper/" title="Főoldalra ugrás" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -291,73 +291,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          概述
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Overview.html" class="md-nav__link md-nav__link--active">
-        概述
+    <li class="md-nav__item">
+      <a href="Overview.html" class="md-nav__link">
+        Áttekintés
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -371,7 +309,7 @@
   
     <li class="md-nav__item">
       <a href="Features.html" class="md-nav__link">
-        功能
+        Funkciók
       </a>
     </li>
   
@@ -386,7 +324,7 @@
   
     <li class="md-nav__item">
       <a href="FAQ.html" class="md-nav__link">
-        常见问题
+        Gyakran ismételt kérdések
       </a>
     </li>
   
@@ -401,7 +339,7 @@
   
     <li class="md-nav__item">
       <a href="Releases.html" class="md-nav__link">
-        发行说明
+        Kiadás
       </a>
     </li>
   
@@ -416,7 +354,7 @@
   
     <li class="md-nav__item">
       <a href="Config_Changes.html" class="md-nav__link">
-        配置变更
+        Konfigurációs változások
       </a>
     </li>
   
@@ -431,7 +369,7 @@
   
     <li class="md-nav__item">
       <a href="Contact.html" class="md-nav__link">
-        联系方式
+        Kapcsolat
       </a>
     </li>
   
@@ -454,14 +392,14 @@
       
       
         <label class="md-nav__link" for="__nav_7">
-          安装和配置
+          Telepítés és Konfiguráció
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="安装和配置" data-md-level="1">
+      <nav class="md-nav" aria-label="Telepítés és Konfiguráció" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
-          安装和配置
+          Telepítés és Konfiguráció
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -472,7 +410,7 @@
   
     <li class="md-nav__item">
       <a href="Installation.html" class="md-nav__link">
-        安装
+        Telepítés
       </a>
     </li>
   
@@ -494,14 +432,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_2">
-          配置参考
+          Konfigurációs Hivatkozás
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="配置参考" data-md-level="2">
+      <nav class="md-nav" aria-label="Konfigurációs Hivatkozás" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_2">
           <span class="md-nav__icon md-icon"></span>
-          配置参考
+          Konfigurációs Hivatkozás
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -512,7 +450,7 @@
   
     <li class="md-nav__item">
       <a href="Config_Reference.html" class="md-nav__link">
-        配置参考
+        Konfigurációs hivatkozás
       </a>
     </li>
   
@@ -526,7 +464,7 @@
   
     <li class="md-nav__item">
       <a href="Rotation_Distance.html" class="md-nav__link">
-        旋转距离
+        Forgatási távolság
       </a>
     </li>
   
@@ -547,7 +485,7 @@
   
     <li class="md-nav__item">
       <a href="Config_checks.html" class="md-nav__link">
-        配置检查
+        Konfigurációs ellenőrzések
       </a>
     </li>
   
@@ -569,14 +507,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_4">
-          打印床调平
+          Tárgyasztal szint
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="打印床调平" data-md-level="2">
+      <nav class="md-nav" aria-label="Tárgyasztal szint" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_4">
           <span class="md-nav__icon md-icon"></span>
-          打印床调平
+          Tárgyasztal szint
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -587,7 +525,7 @@
   
     <li class="md-nav__item">
       <a href="Bed_Level.html" class="md-nav__link">
-        打印床调平
+        Tárgyasztal szintezése
       </a>
     </li>
   
@@ -601,7 +539,7 @@
   
     <li class="md-nav__item">
       <a href="Delta_Calibrate.html" class="md-nav__link">
-        三角校正
+        Delta kalibrálás
       </a>
     </li>
   
@@ -615,7 +553,7 @@
   
     <li class="md-nav__item">
       <a href="Probe_Calibrate.html" class="md-nav__link">
-        探针校准
+        Szonda kalibrálása
       </a>
     </li>
   
@@ -643,7 +581,7 @@
   
     <li class="md-nav__item">
       <a href="Manual_Level.html" class="md-nav__link">
-        手动调平
+        Kézi szintezés
       </a>
     </li>
   
@@ -657,7 +595,7 @@
   
     <li class="md-nav__item">
       <a href="Bed_Mesh.html" class="md-nav__link">
-        床网
+        Tárgyasztal háló
       </a>
     </li>
   
@@ -671,7 +609,7 @@
   
     <li class="md-nav__item">
       <a href="Endstop_Phase.html" class="md-nav__link">
-        限位相位
+        Végállás fázis
       </a>
     </li>
   
@@ -700,14 +638,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_5">
-          共振补偿
+          Rezonancia Kompenzáció
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="共振补偿" data-md-level="2">
+      <nav class="md-nav" aria-label="Rezonancia Kompenzáció" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_5">
           <span class="md-nav__icon md-icon"></span>
-          共振补偿
+          Rezonancia Kompenzáció
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -718,7 +656,7 @@
   
     <li class="md-nav__item">
       <a href="Resonance_Compensation.html" class="md-nav__link">
-        共振补偿
+        Rezonancia Kompenzáció
       </a>
     </li>
   
@@ -732,7 +670,7 @@
   
     <li class="md-nav__item">
       <a href="Measuring_Resonances.html" class="md-nav__link">
-        共振值测量
+        Rezonanciák mérése
       </a>
     </li>
   
@@ -753,7 +691,7 @@
   
     <li class="md-nav__item">
       <a href="Pressure_Advance.html" class="md-nav__link">
-        压力提前
+        Nyomás előtolás
       </a>
     </li>
   
@@ -767,7 +705,7 @@
   
     <li class="md-nav__item">
       <a href="G-Codes.html" class="md-nav__link">
-        G-Codes
+        G-kódok
       </a>
     </li>
   
@@ -789,14 +727,14 @@
       
       
         <label class="md-nav__link" for="__nav_7_8">
-          命令模板
+          Parancssablonok
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="命令模板" data-md-level="2">
+      <nav class="md-nav" aria-label="Parancssablonok" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_8">
           <span class="md-nav__icon md-icon"></span>
-          命令模板
+          Parancssablonok
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -807,7 +745,7 @@
   
     <li class="md-nav__item">
       <a href="Command_Templates.html" class="md-nav__link">
-        命令模板
+        Parancs sablonok
       </a>
     </li>
   
@@ -821,7 +759,7 @@
   
     <li class="md-nav__item">
       <a href="Status_Reference.html" class="md-nav__link">
-        状态参考
+        Állapot referencia
       </a>
     </li>
   
@@ -842,7 +780,7 @@
   
     <li class="md-nav__item">
       <a href="TMC_Drivers.html" class="md-nav__link">
-        TMC 驱动器
+        TMC meghajtók
       </a>
     </li>
   
@@ -856,7 +794,7 @@
   
     <li class="md-nav__item">
       <a href="Multi_MCU_Homing.html" class="md-nav__link">
-        多微控制器归位与探高
+        Több mikrovezélős kezdőpont és szondázás
       </a>
     </li>
   
@@ -870,7 +808,7 @@
   
     <li class="md-nav__item">
       <a href="Slicers.html" class="md-nav__link">
-        切片软件
+        Szeletelők
       </a>
     </li>
   
@@ -884,7 +822,7 @@
   
     <li class="md-nav__item">
       <a href="Skew_Correction.html" class="md-nav__link">
-        偏斜校正
+        Ferdeség korrekció
       </a>
     </li>
   
@@ -898,7 +836,7 @@
   
     <li class="md-nav__item">
       <a href="Exclude_Object.html" class="md-nav__link">
-        排除对象
+        Objektumok kizárása
       </a>
     </li>
   
@@ -912,7 +850,7 @@
   
     <li class="md-nav__item">
       <a href="Using_PWM_Tools.html" class="md-nav__link">
-        使用 PWM 工具
+        PWM eszközök használata
       </a>
     </li>
   
@@ -942,14 +880,14 @@
       
       
         <label class="md-nav__link" for="__nav_8">
-          开发者文档
+          Fejlesztői Dokumentáció
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="开发者文档" data-md-level="1">
+      <nav class="md-nav" aria-label="Fejlesztői Dokumentáció" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
-          开发者文档
+          Fejlesztői Dokumentáció
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -960,7 +898,7 @@
   
     <li class="md-nav__item">
       <a href="Code_Overview.html" class="md-nav__link">
-        代码总览
+        Kód áttekintése
       </a>
     </li>
   
@@ -974,7 +912,7 @@
   
     <li class="md-nav__item">
       <a href="Kinematics.html" class="md-nav__link">
-        运动学
+        Kinematika
       </a>
     </li>
   
@@ -988,7 +926,7 @@
   
     <li class="md-nav__item">
       <a href="Protocol.html" class="md-nav__link">
-        协议
+        Protokoll
       </a>
     </li>
   
@@ -1002,7 +940,7 @@
   
     <li class="md-nav__item">
       <a href="API_Server.html" class="md-nav__link">
-        API 服务器
+        API szerver
       </a>
     </li>
   
@@ -1016,7 +954,7 @@
   
     <li class="md-nav__item">
       <a href="MCU_Commands.html" class="md-nav__link">
-        MCU命令
+        MCU parancsok
       </a>
     </li>
   
@@ -1030,7 +968,7 @@
   
     <li class="md-nav__item">
       <a href="CANBUS_protocol.html" class="md-nav__link">
-        CANBUS 协议 (CANBUS protocol)
+        CANBUS protokoll
       </a>
     </li>
   
@@ -1044,7 +982,7 @@
   
     <li class="md-nav__item">
       <a href="Debugging.html" class="md-nav__link">
-        调试
+        Hibakeresés
       </a>
     </li>
   
@@ -1058,7 +996,7 @@
   
     <li class="md-nav__item">
       <a href="Benchmarks.html" class="md-nav__link">
-        基准测试
+        Referenciaértékek
       </a>
     </li>
   
@@ -1072,7 +1010,7 @@
   
     <li class="md-nav__item">
       <a href="CONTRIBUTING.html" class="md-nav__link">
-        为 Klipper 做贡献
+        Hozzájárulás a Klipperhez
       </a>
     </li>
   
@@ -1086,7 +1024,7 @@
   
     <li class="md-nav__item">
       <a href="Packaging.html" class="md-nav__link">
-        打包 Klipper
+        Klipper csomagolás
       </a>
     </li>
   
@@ -1116,14 +1054,14 @@
       
       
         <label class="md-nav__link" for="__nav_9">
-          设备特定文档
+          Eszközspecifikus Dokumentumok
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="设备特定文档" data-md-level="1">
+      <nav class="md-nav" aria-label="Eszközspecifikus Dokumentumok" data-md-level="1">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
-          设备特定文档
+          Eszközspecifikus Dokumentumok
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1134,7 +1072,7 @@
   
     <li class="md-nav__item">
       <a href="Example_Configs.html" class="md-nav__link">
-        配置示例
+        Példa konfigurációk
       </a>
     </li>
   
@@ -1148,7 +1086,7 @@
   
     <li class="md-nav__item">
       <a href="SDCard_Updates.html" class="md-nav__link">
-        通过SD卡更新
+        SD-kártya frissítések
       </a>
     </li>
   
@@ -1162,7 +1100,7 @@
   
     <li class="md-nav__item">
       <a href="RPi_microcontroller.html" class="md-nav__link">
-        RPi 微控制器
+        RPi mikrokontroller
       </a>
     </li>
   
@@ -1190,7 +1128,7 @@
   
     <li class="md-nav__item">
       <a href="Bootloaders.html" class="md-nav__link">
-        底层引导程序
+        Bootloaderek
       </a>
     </li>
   
@@ -1204,7 +1142,7 @@
   
     <li class="md-nav__item">
       <a href="CANBUS.html" class="md-nav__link">
-        CAN 总线
+        CANBUS
       </a>
     </li>
   
@@ -1218,7 +1156,7 @@
   
     <li class="md-nav__item">
       <a href="CANBUS_Troubleshooting.html" class="md-nav__link">
-        CanBus故障排除
+        CANBUS Hibaelhárítás
       </a>
     </li>
   
@@ -1232,7 +1170,7 @@
   
     <li class="md-nav__item">
       <a href="TSL1401CL_Filament_Width_Sensor.html" class="md-nav__link">
-        TSL1401CL 耗材宽度传感器
+        TSL1401CL nyomtatószál szélesség érzékelő
       </a>
     </li>
   
@@ -1246,7 +1184,7 @@
   
     <li class="md-nav__item">
       <a href="Hall_Filament_Width_Sensor.html" class="md-nav__link">
-        霍尔耗材线径传感器
+        Hall nyomtatószál szélesség érzékelő
       </a>
     </li>
   
@@ -1268,7 +1206,7 @@
   
     <li class="md-nav__item">
       <a href="Sponsors.html" class="md-nav__link">
-        赞助
+        Szponzorok
       </a>
     </li>
   
@@ -1287,7 +1225,7 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="目录">
+<nav class="md-nav md-nav--secondary" aria-label="Tartalomjegyzék">
   
   
   
@@ -1296,34 +1234,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目录
+      Tartalomjegyzék
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
+  <a href="#telepites-octopi-vel" class="md-nav__link">
+    Telepítés OctoPi-vel
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
+  <a href="#telepites-kiauh-val" class="md-nav__link">
+    Telepítés KIAUH-val
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
+  <a href="#octoprint-beallitasa-a-klipper-hasznalatahoz" class="md-nav__link">
+    OctoPrint beállítása a Klipper használatához
   </a>
   
 </li>
@@ -1340,88 +1271,44 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/Klipper3d/klipper/blob/master/docs/Overview.md" title="编辑此页" class="md-content__button md-icon">
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/OctoPrint.md" title="Oldal szerkesztése" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>欢迎使用Klipper文档。如果刚接触Klipper，请从<a href="features.md">特性</a>和<a href="installation.md">安装</a>文档开始阅读。</p>
-<h2 id="_2">概览信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Features.html">功能</a>：Klipper 中的高级功能列表。</li>
-<li><a href="FAQ.html">常见问题</a>：常见问题。</li>
-<li><a href="Release.md">发行版</a>：Klipper 的版本发布历史。</li>
-<li><a href="Config_Changes.html">配置更改</a>：可能需要手动更新打印机配置文件的软件更改。</li>
-<li><a href="Contact.html">联系</a>：关于如何提交错误报告和联系 Klipper 开发者的信息。</li>
-</ul>
-<h2 id="_3">安装和配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Installation.html">安装</a>：Klipper 安装指南。<ul>
-<li><a href="OctoPrint.html">Octoprint</a>: Guide to installing Octoprint with Klipper.</li>
-</ul>
-</li>
-<li><a href="Config_Reference.html">配置参考</a>：配置参数说明。<ul>
-<li><a href="Rotation_Distance.html">旋转距离</a>：计算旋转距离(rotation_distance)步进参数。</li>
-</ul>
-</li>
-<li><a href="Config_checks.html">检查配置</a>：验证配置文件中的基本引脚设置。</li>
-<li><a href="Bed_Level.html">打印床调平</a>：Klipper 中关于“打印床调平”的信息。<ul>
-<li><a href="Delta_Calibrate.html">三角洲校准</a>：校准三角洲结构。</li>
-<li><a href="Probe_Calibrate.html">探针校准</a>：校准自动Z探针。</li>
-<li><a href="BLTouch.html">BL-Touch</a>：配置“BL-Touch”Z 探针。</li>
-<li><a href="Manual_Level.html">手动调平</a>：校准 Z 限位和调整热床调平螺丝。</li>
-<li><a href="Bed_Mesh.html">床网</a>：基于 XY 位置的打印床高度补偿。</li>
-<li><a href="Endstop_Phase.html">限位相位</a>：使用步进电机相位辅助 Z 限位定位。</li>
-<li><a href="Axis_Twist_Compensation.html">Axis Twist Compensation.md</a>：用于补偿因X台架扭曲而导致的探头读数不准确的工具。</li>
-</ul>
-</li>
-<li><a href="Resonance_Compensation.html">共振补偿</a>：减少打印震纹的工具。<ul>
-<li><a href="Measuring_Resonances.html">测量共振</a>：使用 adxl345 加速度计模块测量共振。</li>
-</ul>
-</li>
-<li><a href="Pressure_Advance.html">提前压力</a>：校准挤出机压力。</li>
-<li><a href="G-Codes.html">G代码</a>：用于 Klipper 的G代码命令。</li>
-<li><a href="Command_Templates.html">命令模板</a>：G代码宏和条件判断。<ul>
-<li><a href="Status_Reference.html">状态参考</a>：可用于宏和类似功能的信息。</li>
-</ul>
-</li>
-<li><a href="TMC_Drivers.html">TMC驱动</a>：在 Klipper 中使用 Trinamic 步进电机驱动。</li>
-<li><a href="Multi_MCU_Homing.html">Multi-MCU Homing</a>：在归位和探测时使用多个微处理器。</li>
-<li><a href="Slicers.html">切片</a>：为 Klipper 配置切片软件。</li>
-<li><a href="Skew_Correction.html">偏斜校正</a>：调整不完全垂直的轴（不完美的方形）。</li>
-<li><a href="Using_PWM_Tools.html">PWM 工具</a>：关于如何使用 PWM 控制的工具，例如激光器或电钻头。</li>
-<li><a href="Exclude_Object.html">排除对象</a>：排除对象实现的指南。</li>
-</ul>
-<h2 id="_4">开发者文档<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Code_Overview.html">代码概述</a>：开发者应该从这个文档开始阅读。</li>
-<li><a href="Kinematics.html">运动学</a>：关于 Klipper 如何实现运动的技术细节。</li>
-<li><a href="Protocol.html">协议</a>：主机和微控制器之间的低级通信协议的信息。</li>
-<li><a href="API_Server.html">API 服务器</a>：关于 Klipper 的命令与控制 API 的信息。</li>
-<li><a href="MCU_Commands.html">MCU 指令</a>：描述在微控制器软件中实现的低级指令。</li>
-<li><a href="CANBUS_protocol.html">CAN 总线协议</a>：Klipper 的 CAN总线报文格式。</li>
-<li><a href="Debugging.html">调试</a>：关于如何测试和调试 Klipper。</li>
-<li><a href="Benchmarks.html">基准测试</a>：关于 Klipper 基准测试的方法。</li>
-<li><a href="CONTRIBUTING.html">贡献</a>：有关如何向 Klipper 提交改进方法的信息。</li>
-<li><a href="Packaging.html">打包</a>：有关于如何构建系统包的信息。</li>
-</ul>
-<h2 id="_5">设备特定文档<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Example_Configs.html">示列配置</a>：有关于添加示列配置到 Klipper 的信息。</li>
-<li><a href="SDCard_Updates.html">SD卡更新</a>：通过将固件拷贝到SD卡中，再通过微控制器的SD卡槽来刷写微控制器。</li>
-<li><a href="RPi_microcontroller.html">将树莓派作为微控制器</a>：关于如何控制与树莓派 GPIO 引脚连接的设备。</li>
-<li><a href="Beaglebone.html">Beaglebone</a>：在 Beaglebone PRU 上运行 Klipper 的详细信息。</li>
-<li><a href="Bootloaders.html">底层引导程序</a>：有关于微控制器刷写的开发者信息。</li>
-<li><a href="Bootloader_Entry.html">Bootloader Entry</a>: 正在请求引导加载程序。</li>
-<li><a href="CANBUS.html">CAN 总线</a>：有关于 Klipper 使用 CAN 总线的信息。<ul>
-<li><a href="CanBus_Troublrouoting.md">CAN Bus故障排除</a>：CAN Bus故障排除提示。</li>
-</ul>
-</li>
-<li><a href="TSL1401CL_Filament_Width_Sensor.html">TSL1401CL 耗材线径传感器</a></li>
-<li><a href="Hall_Filament_Width_Sensor.html">霍尔打印丝宽度传感器</a></li>
-<li><a href="Eddy_Probe.html">Eddy Current Inductive probe</a></li>
-</ul>
+<h1 id="octoprint-a-klipper-hez">OctoPrint a Klipper-hez<a class="headerlink" href="#octoprint-a-klipper-hez" title="Permanent link">&para;</a></h1>
+<p>A Klipper-nek van néhány opciója az alaplapokhoz, az Octoprint volt a Klipper első és eredeti kezelőfelülete. Ez a dokumentum rövid áttekintést ad az ezzel az opcióval történő telepítésről.</p>
+<h2 id="telepites-octopi-vel">Telepítés OctoPi-vel<a class="headerlink" href="#telepites-octopi-vel" title="Permanent link">&para;</a></h2>
+<p>Kezdd az <a href="https://github.com/guysoft/OctoPi">OctoPi</a> telepítésével a Raspberry Pi számítógépre. Használd az OctoPi v0.17.0 vagy újabb verziót - a kiadással kapcsolatos információkért tekintsd meg az <a href="https://github.com/guysoft/OctoPi/releases">OctoPi kiadást</a>.</p>
+<p>Ellenőrizni kell, hogy az OctoPi elindul-e, és hogy az OctoPrint webszerver működik-e. Miután csatlakoztál az OctoPrint weblaphoz, kövesd a felszólítást az OctoPrint frissítésére, ha szükséges.</p>
+<p>Az OctoPi telepítése és az OctoPrint frissítése után be kell lépned a célgépre, hogy futtass egy maréknyi rendszerparancsot.</p>
+<p>Kezd a következő parancsok futtatásával a gazdagépen:</p>
+<p><strong>Ha nincs telepítve a git, kérjük, tedd ezt meg:</strong></p>
+<div class="highlight"><pre><span></span><code>sudo apt install git
+</code></pre></div>
+
+<p>majd folytasd:</p>
+<div class="highlight"><pre><span></span><code>cd ~
+git clone https://github.com/Klipper3d/klipper
+./klipper/scripts/install-octopi.sh
+</code></pre></div>
+
+<p>A fentiek letöltik a Klippert, telepítik a szükséges rendszerfüggőségeket, beállítják a Klippert, hogy a rendszer indításakor fusson, és elindítják a Klipper gazda szoftvert. Ehhez internetkapcsolat szükséges, és a művelet befejezése néhány percet vehet igénybe.</p>
+<h2 id="telepites-kiauh-val">Telepítés KIAUH-val<a class="headerlink" href="#telepites-kiauh-val" title="Permanent link">&para;</a></h2>
+<p>A KIAUH használható az OctoPrint telepítéséhez számos Linux alapú rendszerre, amelyeken a Debian egy formája fut. További információ található itt <a href="https://github.com/dw-0/kiauh">https://github.com/dw-0/kiauh</a></p>
+<h2 id="octoprint-beallitasa-a-klipper-hasznalatahoz">OctoPrint beállítása a Klipper használatához<a class="headerlink" href="#octoprint-beallitasa-a-klipper-hasznalatahoz" title="Permanent link">&para;</a></h2>
+<p>Az OctoPrint webszerverét úgy kell konfigurálni, hogy kommunikálni tudjon a Klipper gazda szoftverrel. Egy webböngésző segítségével jelentkezz be az OctoPrint weboldalára, majd konfiguráld a következő elemeket:</p>
+<p>Navigálj a Beállítások fülre (a csavarkulcs ikon az oldal tetején). A "Soros kapcsolat" alatt a "További soros portok" alatt add hozzá:</p>
+<div class="highlight"><pre><span></span><code>~/printer_data/comms/klippy.sock
+</code></pre></div>
+
+<p>Ezután kattints a "Mentés" gombra.</p>
+<p><em>Némely régebbi rendszerben ez a cím lehet <code>/tmp/printer</code></em></p>
+<p>Lépj be ismét a Beállítások fülre, és a "Soros kapcsolat" alatt módosítsd a "Soros port" beállítást a fent megadottra.</p>
+<p>A Beállítások lapon navigálj a "Viselkedés" alfülre, és válaszd a "Folyamatban lévő nyomtatások törlése, de a nyomtatóhoz való csatlakozás fenntartása" lehetőséget. Kattints a "Mentés" gombra.</p>
+<p>A főoldalon a "Csatlakozás" szakaszban (az oldal bal felső részén) győződj meg róla, hogy a "Soros port" az újonnan hozzáadott kiegészítő portra van beállítva, majd kattints a "Csatlakozás" gombra. (Ha nincs a rendelkezésre álló választékban, akkor próbáld meg újratölteni az oldalt.)</p>
+<p>Ha csatlakoztál, navigálj a "Terminál" fülre, és írd be a "status" (idézőjelek nélkül) parancsot a parancsbeviteli mezőbe, majd kattints a "Küldés" gombra. A terminálablak valószínűleg azt fogja jelenteni, hogy hiba történt a konfigurációs fájl megnyitásakor - ez azt jelenti, hogy az OctoPrint sikeresen kommunikál a Klipper-rel.</p>
+<p>Kérjük, folytasd az <Installation.md> és <em>A mikrokontroller építése és égetése</em> részt</p>
 
               
             </article>
@@ -1430,32 +1317,12 @@
         
           <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
-            回到页面顶部
+            Back to top
           </a>
         
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="页脚">
-      
-      
-        
-        <a href="Features.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 功能" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              功能
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1477,7 +1344,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "search": "assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.top", "search.suggest", "search.highlight", "search.share"], "translations": {"clipboard.copy": "M\u00e1sol\u00e1s v\u00e1g\u00f3lapra", "clipboard.copied": "V\u00e1g\u00f3lapra m\u00e1solva", "search.config.lang": "hu", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Keres\u00e9s", "search.result.placeholder": "Keres\u00e9shez \u00edrj ide valamit", "search.result.none": "Nincs tal\u00e1lat", "search.result.one": "1 egyez\u0151 dokumentum", "search.result.other": "# egyez\u0151 dokumentum", "search.result.more.one": "1 tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.more.other": "# tov\u00e1bbi tal\u00e1lat az oldalon", "search.result.term.missing": "\u00dcres", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.0bbba5b5.min.js"}</script>
     
     
       <script src="assets/javascripts/bundle.e1a181d9.min.js"></script>

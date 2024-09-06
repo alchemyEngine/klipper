@@ -13,7 +13,7 @@
     
     
       
-        <title>概述 - Klipper 文档</title>
+        <title>Eddy 感应涡流探针 - Klipper 文档</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#eddy" class="md-skip">
           跳转至
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概述
+              Eddy 感应涡流探针
             
           </span>
         </div>
@@ -291,73 +291,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          概述
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Overview.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Overview.html" class="md-nav__link">
         概述
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1301,29 +1239,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
+  <a href="#_1" class="md-nav__link">
+    温度漂移校准
   </a>
   
 </li>
@@ -1340,88 +1257,56 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/Klipper3d/klipper/blob/master/docs/Overview.md" title="编辑此页" class="md-content__button md-icon">
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/Eddy_Probe.md" title="编辑此页" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>欢迎使用Klipper文档。如果刚接触Klipper，请从<a href="features.md">特性</a>和<a href="installation.md">安装</a>文档开始阅读。</p>
-<h2 id="_2">概览信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h1 id="eddy">Eddy 感应涡流探针<a class="headerlink" href="#eddy" title="Permanent link">&para;</a></h1>
+<p>这个文档解释了如何在klipper 中使用 <a href="https://en.wikipedia.org/wiki/Eddy_current">eddy 涡流传感器</a>。</p>
+<p>目前eddy涡流传感器不能作为z 限位传感器使用。这个传感器只能用作z探针。</p>
+<p>首先在 printer.cfg 文件中声明 <a href="Config_Reference.html#probe_eddy_current">probe_eddy_current 配置部分</a>。建议将 <code>z_offset</code> 设置为 0.5mm。传感器通常需要 <code>x_offset</code> 和 <code>y_offset</code>。如果不知道这些值，则应在初始校准时估算这些值。</p>
+<p>校准的第一步是确定传感器的适当 DRIVE_CURRENT。将打印机调至原位，并移动工具头，使传感器靠近床面中心并高出床面约 20 毫米。然后使用 <code>LDC_CALIBRATE_DRIVE_CURRENT CHIP=&lt;config_name&gt;</code> 命令。例如，如果配置部分名为<code>[probe_eddy_current my_eddy_probe]</code>，则应运行 <code>LDC_CALIBRATE_DRIVE_CURRENT CHIP=my_eddy_probe</code>。该命令应在几秒钟内完成。完成后，使用 <code>SAVE_CONFIG</code> 命令将结果保存到 printer.cfg 中，然后重新启动。</p>
+<p>校准的第二步是将传感器读数与相应的 Z 高度相关联。将打印机调回原位，并移动工具头，使喷嘴靠近床面中心。然后运行 <code>PROBE_EDDY_CURRENT_CALIBRATE CHIP=my_eddy_probe</code> 命令。工具启动后，按照<a href="Bed_Level.html#the-paper-test">“纸张测试”</a>中描述的步骤确定给定位置上喷嘴和床面之间的实际距离。完成这些步骤后，就可以 <code>ACCEPT</code> 该位置。然后，工具将移动工具头，使传感器位于喷嘴位置的上方，并运行一系列运动，将传感器与 Z 位置相关联。这需要几分钟时间。工具完成后，发出 <code>SAVE_CONFIG</code> 命令将结果保存到 printer.cfg 中，然后重新启动。</p>
+<p>在第一次校准后最好验证 <code>x_offset</code> 和 <code>y_offset</code> 是否准确。请按照<a href="Probe_Calibrate.html#calibrating-probe-x and-y-offsets">校准探针 X Y 偏移</a>的步骤操作。如果修改了 <code>x_offset</code> 或 <code>y_offset</code> ，请务必在修改后运行 <code>PROBE_EDDY_CURRENT_CALIBRATE</code> 命令（如上所述）。</p>
+<p>一旦校准完成，可以使用所有标准的Klipper 工具命令使用z探针。</p>
+<p>请注意，涡流传感器（以及一般的感应探针）容易受到 “温飘”的影响。也就是说，温度变化会导致报告的 Z 高度发生变化。床面温度或传感器硬件温度的变化都会导致结果偏差。重要的是，校准和探测只能在打印机温度稳定时进行。</p>
+<h2 id="_1">温度漂移校准<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>像所有的感应探针一样，eddy 涡流探针会有很严重的温度偏移。如果eddy 涡流传感器线圈上的温度传感器上可以被配置为<code>[temperature_probe]</code> 去反馈线圈的温度并且启用软件温度偏移补偿。要将探针温度传感器与eddy 涡流传感器连接<code>[temperature_probe]</code> 的名字必须和<code>[probe_eddy_current]</code>一致。比如：</p>
+<div class="highlight"><pre><span></span><code>[probe_eddy_current my_probe]
+# eddy 探针配置文件
+
+[temperature_probe my_probe]
+# 温度探针配置文件
+</code></pre></div>
+
+<p>在<a href="Config_Reference.html#temperature_probe">configuration reference</a>有更多关于如何配置<code>temperature_probe</code>的内容。建议配置<code>calibration_position</code>， <code>calibration_extruder_temp</code>， <code>extruder_heating_z</code>, 和 <code>calibration_bed_temp</code>选项，这会在接下来的校准过程中自动完成一些步骤。</p>
+<p>Eddy probe的制造商提供了一些可以使用的校准预设可以手动添加到<code>[probe_eddy_current]</code>中到<code>drift_calibration</code>选项中。如果他们没提供预设的校准文件或者预设的校准文件不适用于你的系统，<code>temperature_probe</code>模块可以使用TEMPERATURE_PROBE_CALIBRATE`命令来进行手动校准。</p>
+<p>在进行校准前，用户应该知道大概的探针线圈最大温度。这个温度应该被配置到<code>TEMPERATURE_PROBE_CALIBRATE</code>命令的<code>TARGET</code>选项中。校准的目的是尽量有一个最宽的温度范围，因此最好在打印机冷却后进行校准，并且在线圈到达最高温度的时候停止。</p>
+<p>当<code>[temperature_probe]</code> 被配置后，可以使用以下步骤进行热偏移校准：</p>
 <ul>
-<li><a href="Features.html">功能</a>：Klipper 中的高级功能列表。</li>
-<li><a href="FAQ.html">常见问题</a>：常见问题。</li>
-<li><a href="Release.md">发行版</a>：Klipper 的版本发布历史。</li>
-<li><a href="Config_Changes.html">配置更改</a>：可能需要手动更新打印机配置文件的软件更改。</li>
-<li><a href="Contact.html">联系</a>：关于如何提交错误报告和联系 Klipper 开发者的信息。</li>
-</ul>
-<h2 id="_3">安装和配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Installation.html">安装</a>：Klipper 安装指南。<ul>
-<li><a href="OctoPrint.html">Octoprint</a>: Guide to installing Octoprint with Klipper.</li>
+<li>当 <code>[temperature_probe]</code> 被配置后应该使用<code>PROBE_EDDY_CURRENT_CALIBRATE</code>对探针校准。这会获取校准中的温度的变化，并且这对于温度偏移校准是非常有必要的。</li>
+<li>确保喷头保持清洁并且没有多余的耗材残留。</li>
+<li>热床，喷头，和探针线圈在校准前需要到达室温。</li>
+<li>如果<strong>没配置</strong><code>[temperature_probe]</code>中的<code>calibration_position</code>，<code>calibration_extruder_temp</code>和<code>extruder_heating_z</code>选项，则需要执行以下步骤：<ul>
+<li>移动喷头到热床的中心。z轴高度应该至少高于热床30mm。</li>
+<li>加热挤出机温度到最大热床安全温度。150-170C 通常来说适用于绝大部分的配置。加热挤出机的目的是避免喷头在校准过程中的热膨胀。</li>
+<li>当挤出机到达设定温度，移动z下降到离热床1mm的位置。</li>
 </ul>
 </li>
-<li><a href="Config_Reference.html">配置参考</a>：配置参数说明。<ul>
-<li><a href="Rotation_Distance.html">旋转距离</a>：计算旋转距离(rotation_distance)步进参数。</li>
+<li>开始漂移校准。如果探针名字是<code>my_probe</code> 并且最大探针温度可以到达80C，可以使用<code>TEMPERATURE_PROBE_CALIBRATE PROBE=my_probe TARGET=80</code>来进行校准。如果进行了配置，喷头的XY应该会移动到<code>calibration_position</code> 并且Z轴通过<code>extruder_heating_z</code>来调整。将挤出机加热到指定温度后，工具将移动到<code>校准位置</code>指定的 Z 值。</li>
+<li>程序将要求进行手动探测。使用纸张测试执行手动探头，然后使用 <code>ACCEPT</code>接受当前位置。校准程序将使用探针采集第一组采样，然后将探针停在加热位置。</li>
+<li>如果<code>calibration_bed_temp</code><strong>未被</strong>配置启动热床加热到最高安全温度。否则将自动执行此步骤。</li>
+<li>在默认的校准流程中在到达 <code>TARGET</code>之前会每2C要求一次手动偏移探针校准。温度偏移量在校准中可以通过<code>TEMPERATURE_PROBE_CALIBRATE</code> 中的<code>STEP</code>来进行修改。注意在自定义<code>STEP</code> 的值的时候，特别高的值和太少的校准点回导致很差的校准结果。</li>
+<li>在热偏移校准中，可以使用这些额外的gcode 命令：<ul>
+<li><code>TEMPERATURE_PROBE_NEXT</code>可以到达指定温度之前强制创建一个新的采样点。</li>
+<li><code>TEMPERATURE_PROBE_COMPLETE</code> 可以在到达 <code>TARGET</code> 之前完成校准。</li>
+<li><code>ABORT</code> 可以用来结束校准或者取消结果。</li>
 </ul>
 </li>
-<li><a href="Config_checks.html">检查配置</a>：验证配置文件中的基本引脚设置。</li>
-<li><a href="Bed_Level.html">打印床调平</a>：Klipper 中关于“打印床调平”的信息。<ul>
-<li><a href="Delta_Calibrate.html">三角洲校准</a>：校准三角洲结构。</li>
-<li><a href="Probe_Calibrate.html">探针校准</a>：校准自动Z探针。</li>
-<li><a href="BLTouch.html">BL-Touch</a>：配置“BL-Touch”Z 探针。</li>
-<li><a href="Manual_Level.html">手动调平</a>：校准 Z 限位和调整热床调平螺丝。</li>
-<li><a href="Bed_Mesh.html">床网</a>：基于 XY 位置的打印床高度补偿。</li>
-<li><a href="Endstop_Phase.html">限位相位</a>：使用步进电机相位辅助 Z 限位定位。</li>
-<li><a href="Axis_Twist_Compensation.html">Axis Twist Compensation.md</a>：用于补偿因X台架扭曲而导致的探头读数不准确的工具。</li>
+<li>当校准完成使用<code>SAVE_CONFIG</code>去保存温度偏移设置。</li>
 </ul>
-</li>
-<li><a href="Resonance_Compensation.html">共振补偿</a>：减少打印震纹的工具。<ul>
-<li><a href="Measuring_Resonances.html">测量共振</a>：使用 adxl345 加速度计模块测量共振。</li>
-</ul>
-</li>
-<li><a href="Pressure_Advance.html">提前压力</a>：校准挤出机压力。</li>
-<li><a href="G-Codes.html">G代码</a>：用于 Klipper 的G代码命令。</li>
-<li><a href="Command_Templates.html">命令模板</a>：G代码宏和条件判断。<ul>
-<li><a href="Status_Reference.html">状态参考</a>：可用于宏和类似功能的信息。</li>
-</ul>
-</li>
-<li><a href="TMC_Drivers.html">TMC驱动</a>：在 Klipper 中使用 Trinamic 步进电机驱动。</li>
-<li><a href="Multi_MCU_Homing.html">Multi-MCU Homing</a>：在归位和探测时使用多个微处理器。</li>
-<li><a href="Slicers.html">切片</a>：为 Klipper 配置切片软件。</li>
-<li><a href="Skew_Correction.html">偏斜校正</a>：调整不完全垂直的轴（不完美的方形）。</li>
-<li><a href="Using_PWM_Tools.html">PWM 工具</a>：关于如何使用 PWM 控制的工具，例如激光器或电钻头。</li>
-<li><a href="Exclude_Object.html">排除对象</a>：排除对象实现的指南。</li>
-</ul>
-<h2 id="_4">开发者文档<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Code_Overview.html">代码概述</a>：开发者应该从这个文档开始阅读。</li>
-<li><a href="Kinematics.html">运动学</a>：关于 Klipper 如何实现运动的技术细节。</li>
-<li><a href="Protocol.html">协议</a>：主机和微控制器之间的低级通信协议的信息。</li>
-<li><a href="API_Server.html">API 服务器</a>：关于 Klipper 的命令与控制 API 的信息。</li>
-<li><a href="MCU_Commands.html">MCU 指令</a>：描述在微控制器软件中实现的低级指令。</li>
-<li><a href="CANBUS_protocol.html">CAN 总线协议</a>：Klipper 的 CAN总线报文格式。</li>
-<li><a href="Debugging.html">调试</a>：关于如何测试和调试 Klipper。</li>
-<li><a href="Benchmarks.html">基准测试</a>：关于 Klipper 基准测试的方法。</li>
-<li><a href="CONTRIBUTING.html">贡献</a>：有关如何向 Klipper 提交改进方法的信息。</li>
-<li><a href="Packaging.html">打包</a>：有关于如何构建系统包的信息。</li>
-</ul>
-<h2 id="_5">设备特定文档<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Example_Configs.html">示列配置</a>：有关于添加示列配置到 Klipper 的信息。</li>
-<li><a href="SDCard_Updates.html">SD卡更新</a>：通过将固件拷贝到SD卡中，再通过微控制器的SD卡槽来刷写微控制器。</li>
-<li><a href="RPi_microcontroller.html">将树莓派作为微控制器</a>：关于如何控制与树莓派 GPIO 引脚连接的设备。</li>
-<li><a href="Beaglebone.html">Beaglebone</a>：在 Beaglebone PRU 上运行 Klipper 的详细信息。</li>
-<li><a href="Bootloaders.html">底层引导程序</a>：有关于微控制器刷写的开发者信息。</li>
-<li><a href="Bootloader_Entry.html">Bootloader Entry</a>: 正在请求引导加载程序。</li>
-<li><a href="CANBUS.html">CAN 总线</a>：有关于 Klipper 使用 CAN 总线的信息。<ul>
-<li><a href="CanBus_Troublrouoting.md">CAN Bus故障排除</a>：CAN Bus故障排除提示。</li>
-</ul>
-</li>
-<li><a href="TSL1401CL_Filament_Width_Sensor.html">TSL1401CL 耗材线径传感器</a></li>
-<li><a href="Hall_Filament_Width_Sensor.html">霍尔打印丝宽度传感器</a></li>
-<li><a href="Eddy_Probe.html">Eddy Current Inductive probe</a></li>
-</ul>
+<p>综上所述，与大多数其他程序相比，上述校准过程更具挑战性，也更耗时。它可能需要练习和多次尝试才能达到最佳校准效果。</p>
 
               
             </article>
@@ -1436,26 +1321,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="页脚">
-      
-      
-        
-        <a href="Features.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 功能" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              功能
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

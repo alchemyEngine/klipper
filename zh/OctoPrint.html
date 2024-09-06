@@ -13,7 +13,7 @@
     
     
       
-        <title>概述 - Klipper 文档</title>
+        <title>OctoPrint for Klipper - Klipper 文档</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#octoprint-for-klipper" class="md-skip">
           跳转至
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              概述
+              OctoPrint for Klipper
             
           </span>
         </div>
@@ -291,73 +291,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          概述
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Overview.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Overview.html" class="md-nav__link">
         概述
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1301,29 +1239,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    概览信息
+  <a href="#octopi" class="md-nav__link">
+    在OctoPi 上进行安装
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装和配置
+  <a href="#installing-with-kiauh" class="md-nav__link">
+    Installing with KIAUH
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    开发者文档
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    设备特定文档
+  <a href="#configuring-octoprint-to-use-klipper" class="md-nav__link">
+    Configuring OctoPrint to use Klipper
   </a>
   
 </li>
@@ -1340,88 +1271,44 @@
             <article class="md-content__inner md-typeset">
               
                 
-<a href="https://github.com/Klipper3d/klipper/blob/master/docs/Overview.md" title="编辑此页" class="md-content__button md-icon">
+<a href="https://github.com/Klipper3d/klipper/blob/master/docs/OctoPrint.md" title="编辑此页" class="md-content__button md-icon">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
 </a>
 
 
-<h1 id="_1">概述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>欢迎使用Klipper文档。如果刚接触Klipper，请从<a href="features.md">特性</a>和<a href="installation.md">安装</a>文档开始阅读。</p>
-<h2 id="_2">概览信息<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Features.html">功能</a>：Klipper 中的高级功能列表。</li>
-<li><a href="FAQ.html">常见问题</a>：常见问题。</li>
-<li><a href="Release.md">发行版</a>：Klipper 的版本发布历史。</li>
-<li><a href="Config_Changes.html">配置更改</a>：可能需要手动更新打印机配置文件的软件更改。</li>
-<li><a href="Contact.html">联系</a>：关于如何提交错误报告和联系 Klipper 开发者的信息。</li>
-</ul>
-<h2 id="_3">安装和配置<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Installation.html">安装</a>：Klipper 安装指南。<ul>
-<li><a href="OctoPrint.html">Octoprint</a>: Guide to installing Octoprint with Klipper.</li>
-</ul>
-</li>
-<li><a href="Config_Reference.html">配置参考</a>：配置参数说明。<ul>
-<li><a href="Rotation_Distance.html">旋转距离</a>：计算旋转距离(rotation_distance)步进参数。</li>
-</ul>
-</li>
-<li><a href="Config_checks.html">检查配置</a>：验证配置文件中的基本引脚设置。</li>
-<li><a href="Bed_Level.html">打印床调平</a>：Klipper 中关于“打印床调平”的信息。<ul>
-<li><a href="Delta_Calibrate.html">三角洲校准</a>：校准三角洲结构。</li>
-<li><a href="Probe_Calibrate.html">探针校准</a>：校准自动Z探针。</li>
-<li><a href="BLTouch.html">BL-Touch</a>：配置“BL-Touch”Z 探针。</li>
-<li><a href="Manual_Level.html">手动调平</a>：校准 Z 限位和调整热床调平螺丝。</li>
-<li><a href="Bed_Mesh.html">床网</a>：基于 XY 位置的打印床高度补偿。</li>
-<li><a href="Endstop_Phase.html">限位相位</a>：使用步进电机相位辅助 Z 限位定位。</li>
-<li><a href="Axis_Twist_Compensation.html">Axis Twist Compensation.md</a>：用于补偿因X台架扭曲而导致的探头读数不准确的工具。</li>
-</ul>
-</li>
-<li><a href="Resonance_Compensation.html">共振补偿</a>：减少打印震纹的工具。<ul>
-<li><a href="Measuring_Resonances.html">测量共振</a>：使用 adxl345 加速度计模块测量共振。</li>
-</ul>
-</li>
-<li><a href="Pressure_Advance.html">提前压力</a>：校准挤出机压力。</li>
-<li><a href="G-Codes.html">G代码</a>：用于 Klipper 的G代码命令。</li>
-<li><a href="Command_Templates.html">命令模板</a>：G代码宏和条件判断。<ul>
-<li><a href="Status_Reference.html">状态参考</a>：可用于宏和类似功能的信息。</li>
-</ul>
-</li>
-<li><a href="TMC_Drivers.html">TMC驱动</a>：在 Klipper 中使用 Trinamic 步进电机驱动。</li>
-<li><a href="Multi_MCU_Homing.html">Multi-MCU Homing</a>：在归位和探测时使用多个微处理器。</li>
-<li><a href="Slicers.html">切片</a>：为 Klipper 配置切片软件。</li>
-<li><a href="Skew_Correction.html">偏斜校正</a>：调整不完全垂直的轴（不完美的方形）。</li>
-<li><a href="Using_PWM_Tools.html">PWM 工具</a>：关于如何使用 PWM 控制的工具，例如激光器或电钻头。</li>
-<li><a href="Exclude_Object.html">排除对象</a>：排除对象实现的指南。</li>
-</ul>
-<h2 id="_4">开发者文档<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Code_Overview.html">代码概述</a>：开发者应该从这个文档开始阅读。</li>
-<li><a href="Kinematics.html">运动学</a>：关于 Klipper 如何实现运动的技术细节。</li>
-<li><a href="Protocol.html">协议</a>：主机和微控制器之间的低级通信协议的信息。</li>
-<li><a href="API_Server.html">API 服务器</a>：关于 Klipper 的命令与控制 API 的信息。</li>
-<li><a href="MCU_Commands.html">MCU 指令</a>：描述在微控制器软件中实现的低级指令。</li>
-<li><a href="CANBUS_protocol.html">CAN 总线协议</a>：Klipper 的 CAN总线报文格式。</li>
-<li><a href="Debugging.html">调试</a>：关于如何测试和调试 Klipper。</li>
-<li><a href="Benchmarks.html">基准测试</a>：关于 Klipper 基准测试的方法。</li>
-<li><a href="CONTRIBUTING.html">贡献</a>：有关如何向 Klipper 提交改进方法的信息。</li>
-<li><a href="Packaging.html">打包</a>：有关于如何构建系统包的信息。</li>
-</ul>
-<h2 id="_5">设备特定文档<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="Example_Configs.html">示列配置</a>：有关于添加示列配置到 Klipper 的信息。</li>
-<li><a href="SDCard_Updates.html">SD卡更新</a>：通过将固件拷贝到SD卡中，再通过微控制器的SD卡槽来刷写微控制器。</li>
-<li><a href="RPi_microcontroller.html">将树莓派作为微控制器</a>：关于如何控制与树莓派 GPIO 引脚连接的设备。</li>
-<li><a href="Beaglebone.html">Beaglebone</a>：在 Beaglebone PRU 上运行 Klipper 的详细信息。</li>
-<li><a href="Bootloaders.html">底层引导程序</a>：有关于微控制器刷写的开发者信息。</li>
-<li><a href="Bootloader_Entry.html">Bootloader Entry</a>: 正在请求引导加载程序。</li>
-<li><a href="CANBUS.html">CAN 总线</a>：有关于 Klipper 使用 CAN 总线的信息。<ul>
-<li><a href="CanBus_Troublrouoting.md">CAN Bus故障排除</a>：CAN Bus故障排除提示。</li>
-</ul>
-</li>
-<li><a href="TSL1401CL_Filament_Width_Sensor.html">TSL1401CL 耗材线径传感器</a></li>
-<li><a href="Hall_Filament_Width_Sensor.html">霍尔打印丝宽度传感器</a></li>
-<li><a href="Eddy_Probe.html">Eddy Current Inductive probe</a></li>
-</ul>
+<h1 id="octoprint-for-klipper">OctoPrint for Klipper<a class="headerlink" href="#octoprint-for-klipper" title="Permanent link">&para;</a></h1>
+<p>Klipper 有几个不同的前端选择，Octoprint 是最早也是最原始的Klipper 前端。这篇文档会给一个大致的概览关于如何在Octoprint 上安装Klipper。</p>
+<h2 id="octopi">在OctoPi 上进行安装<a class="headerlink" href="#octopi" title="Permanent link">&para;</a></h2>
+<p>首先在 Raspberry Pi 上安装 <a href="https://github.com/guysoft/OctoPi">OctoPi</a>。使用 OctoPi v0.17.0 或更高版本 - 有关版本信息，请参考 <a href="https://github.com/guysoft/OctoPi/releases">OctoPi release</a>。</p>
+<p>One should verify that OctoPi boots and that the OctoPrint web server works. After connecting to the OctoPrint web page, follow the prompt to upgrade OctoPrint if needed.</p>
+<p>After installing OctoPi and upgrading OctoPrint, it will be necessary to ssh into the target machine to run a handful of system commands.</p>
+<p>Start by running these commands on your host device:</p>
+<p><strong>If you do not have git installed, please do so with:</strong></p>
+<div class="highlight"><pre><span></span><code>sudo apt install git
+</code></pre></div>
+
+<p>then proceed:</p>
+<div class="highlight"><pre><span></span><code>cd ~
+git clone https://github.com/Klipper3d/klipper
+./klipper/scripts/install-octopi.sh
+</code></pre></div>
+
+<p>The above will download Klipper, install the needed system dependencies, setup Klipper to run at system startup, and start the Klipper host software. It will require an internet connection and it may take a few minutes to complete.</p>
+<h2 id="installing-with-kiauh">Installing with KIAUH<a class="headerlink" href="#installing-with-kiauh" title="Permanent link">&para;</a></h2>
+<p>KIAUH can be used to install OctoPrint on a variety of Linux based systems that run a form of Debian. More information can be found at <a href="https://github.com/dw-0/kiauh">https://github.com/dw-0/kiauh</a></p>
+<h2 id="configuring-octoprint-to-use-klipper">Configuring OctoPrint to use Klipper<a class="headerlink" href="#configuring-octoprint-to-use-klipper" title="Permanent link">&para;</a></h2>
+<p>The OctoPrint web server needs to be configured to communicate with the Klipper host software. Using a web browser, login to the OctoPrint web page and then configure the following items:</p>
+<p>Navigate to the Settings tab (the wrench icon at the top of the page). Under "Serial Connection" in "Additional serial ports" add:</p>
+<div class="highlight"><pre><span></span><code>~/printer_data/comms/klippy.sock
+</code></pre></div>
+
+<p>Then click "Save".</p>
+<p><em>In some older setups this address may be <code>/tmp/printer</code></em></p>
+<p>Enter the Settings tab again and under "Serial Connection" change the "Serial Port" setting to the one added above.</p>
+<p>In the Settings tab, navigate to the "Behavior" sub-tab and select the "Cancel any ongoing prints but stay connected to the printer" option. Click "Save".</p>
+<p>From the main page, under the "Connection" section (at the top left of the page) make sure the "Serial Port" is set to the new additional one added and click "Connect". (If it is not in the available selection then try reloading the page.)</p>
+<p>Once connected, navigate to the "Terminal" tab and type "status" (without the quotes) into the command entry box and click "Send". The terminal window will likely report there is an error opening the config file - that means OctoPrint is successfully communicating with Klipper.</p>
+<p>Please proceed to <Installation.md> and the <em>Building and flashing the micro-controller</em> section</p>
 
               
             </article>
@@ -1436,26 +1323,6 @@
       </main>
       
         <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="页脚">
-      
-      
-        
-        <a href="Features.html" class="md-footer__link md-footer__link--next" aria-label="下一页: 功能" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              功能
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
